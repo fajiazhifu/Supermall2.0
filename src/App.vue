@@ -1,28 +1,31 @@
 <template>
   <div id="app">
-    <tar-bar>
-        <tar-bar-item path="/home">
-        <img slot="item-icon" src="./assets/img/tabbar/home.svg">
-        <img slot="item-icon-active" src="./assets/img/tabbar/home_active.svg">
-        <div slot="item-name">首页</div>
-    </tar-bar-item>
-        <tar-bar-item path="/cart">
-            <img slot="item-icon" src="./assets/img/tabbar/cart.svg">
-            <img slot="item-icon-active" src="./assets/img/tabbar/cart_active.svg">
-            <div slot="item-name">购物车</div>
-        </tar-bar-item>
-        <tar-bar-item path="/category">
-            <img slot="item-icon" src="./assets/img/tabbar/category.svg">
-            <img slot="item-icon-active" src="./assets/img/tabbar/category_active.svg">
-            <div slot="item-name">分类</div>
-        </tar-bar-item>
-        <tar-bar-item path="/profile">
-            <img slot="item-icon" src="./assets/img/tabbar/profile.svg">
-            <img slot="item-icon-active" src="./assets/img/tabbar/profile_active.svg">
-            <div slot="item-name">我的</div>
-        </tar-bar-item>
-    </tar-bar>
-      <router-view></router-view>
+      <keep-alive exclude="detail">
+          <router-view></router-view>
+      </keep-alive>
+
+      <tar-bar>
+          <tar-bar-item path="/home">
+              <img slot="item-icon" src="./assets/img/tabbar/home.svg">
+              <img slot="item-icon-active" src="./assets/img/tabbar/home_active.svg">
+              <div slot="item-name">首页</div>
+          </tar-bar-item>
+          <tar-bar-item path="/cart">
+              <img slot="item-icon" src="./assets/img/tabbar/cart.svg">
+              <img slot="item-icon-active" src="./assets/img/tabbar/cart_active.svg">
+              <div slot="item-name">购物车</div>
+          </tar-bar-item>
+          <tar-bar-item path="/category">
+              <img slot="item-icon" src="./assets/img/tabbar/category.svg">
+              <img slot="item-icon-active" src="./assets/img/tabbar/category_active.svg">
+              <div slot="item-name">分类</div>
+          </tar-bar-item>
+          <tar-bar-item path="/profile">
+              <img slot="item-icon" src="./assets/img/tabbar/profile.svg">
+              <img slot="item-icon-active" src="./assets/img/tabbar/profile_active.svg">
+              <div slot="item-name">我的</div>
+          </tar-bar-item>
+      </tar-bar>
   </div>
 </template>
 
@@ -40,4 +43,5 @@
 
 <style>
     @import "./assets/css/body.css";
+
 </style>

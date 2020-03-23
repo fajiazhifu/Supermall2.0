@@ -8,7 +8,7 @@ const Home= () =>import("../view/home/Home")
 const Category= () =>import("../view/category/Category")
 const Cart= () =>import("../view/cart/Cart")
 const Profile= () =>import("../view/profile/Profile")
-
+const Detail= () =>import("../view/detail/Detail")
 const  routes=[
   {
     path:'',
@@ -29,6 +29,10 @@ const  routes=[
   {
     path: '/Profile',
     component:Profile
+  },
+  {
+    path:'/detail',
+    component:Detail
   },
 ]
 

@@ -1,8 +1,5 @@
 <template>
     <div id="tab-bar-item" @click="itemClick" >
-<!--        <div v-show="!isActive"><slot name="item-icon"></slot></div>-->
-<!--        <div v-show="isActive"><slot name="item-icon-active"></slot></div>-->
-<!--        <div :style="isfontColor"><slot name="item-name"></slot></div>-->
         <div v-show="!isActive" class="item-icon"><slot name="item-icon"></slot></div>
         <div v-show="isActive" class="item-active-icon"><slot name="item-icon-active"></slot></div>
         <div :style="isfontColor" class="item-text"><slot name="item-name"></slot></div>
@@ -37,7 +34,9 @@
 
     #tab-bar-item {
         flex: 1;
+
     }
+
 
     .item-icon img, .item-active-icon img {
         width: 24px;
