@@ -2,7 +2,7 @@ import {request} from "./request";
 
 export function getDetail(iid) {
   return request({
-    url: 'http://123.207.32.32:8000/api/wh/detail',
+    url: '/detail',
     params: {
       iid
     }
